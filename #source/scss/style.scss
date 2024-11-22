@@ -3,3 +3,92 @@
 @import "modules/variables.scss";
 @import "modules/custom.scss";
 @import "modules/animation.scss";
+
+
+
+.container {
+    margin: 0 auto;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --font-family: "Andale Mono", sans-serif;
+    --second-family: "Noto Serif Display", sans-serif;
+  }
+
+// header
+@import "modules/header";
+
+// shop
+@import "modules/shop";
+
+
+
+// cta-banner
+.cta-banner {
+    
+
+    &__wrapper {
+        background: #f3f2ee;
+        display: flex;
+        justify-content: space-between;
+
+        padding: 78px 68px;
+    }
+
+    &__form {
+        width: 60%;
+
+        h3 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 31px;
+            color: #0b0b0b;
+        }
+        p {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 144%;
+            color: #0b0b0b;    
+        }
+        input {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 18px;
+            color: #0b0b0b;
+            padding: 18px 26px;
+            border-radius: 0;
+            border: none;
+
+            width: 35%;
+
+            margin-right: 34px;
+            margin-top: 56px;
+        }
+        button {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 18px;
+            color: #0b0b0b;
+            border: 1px solid #0b0b0b;
+            padding: 18px 74px;
+        }
+    }
+
+    &__input {
+        margin-bottom: 96px;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 16px;
+        a {
+            text-decoration: none;
+        }
+    }
+}
