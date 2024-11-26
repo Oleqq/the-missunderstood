@@ -471,6 +471,7 @@ ul {
   font-weight: 400;
   font-size: 14px;
   color: #0b0b0b;
+  text-decoration: none;
 }
 
 .product-list {
@@ -580,12 +581,18 @@ ul {
   color: #0b0b0b;
   margin-bottom: 30px;
 }
+.section-title.text-center {
+  text-align: center;
+}
 .section-subtitle {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 21px;
   line-height: 129%;
   color: #0b0b0b;
+}
+.section-subtitle.text-center {
+  text-align: center;
 }
 .section-divider {
   padding: 102px 0;
@@ -916,5 +923,107 @@ ul {
   line-height: 144%;
   text-align: center;
   color: #0b0b0b;
+}
+
+.travel-articles .section-subtitle {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.travel-articles__wrapper {
+  display: flex;
+  gap: 60px;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  position: relative;
+}
+.travel-articles__wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #cecece;
+  bottom: 0;
+}
+.travel-articles__col {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+  position: relative;
+}
+.travel-articles__col .travel-articles__card:last-of-type {
+  padding-bottom: 150px;
+}
+.travel-articles__col.travel-articles__left::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #cecece;
+  right: -30px;
+}
+.travel-articles__col.travel-articles__right::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #cecece;
+  left: -30px;
+}
+.travel-articles__card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.travel-articles__card img {
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+}
+.travel-articles__card h4 {
+  margin: 30px 0 16px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 31px;
+  color: #0b0b0b;
+}
+.travel-articles__card p, .travel-articles__card span {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 144%;
+  color: #0b0b0b;
+  margin: 0;
+}
+
+.travel-guides {
+  margin-bottom: 140px;
+}
+.travel-guides__card {
+  display: flex;
+}
+.travel-guides__card img {
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+}
+.travel-guides__slider {
+  display: flex;
+}
+.travel-guides__slider .swiper-wrapper {
+  display: flex;
+}
+
+.article-categories {
+  margin-bottom: 115px;
+}
+.article-categories__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.article-category {
+  display: flex;
+  gap: 26px;
 }
 /*# sourceMappingURL=style.css.map */

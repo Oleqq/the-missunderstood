@@ -12,4 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
       },
     });
   });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.travel-guides__slider', {
+      
+      
+      slidesPerView: 4,  
+      
+      spaceBetween: 28,  
+      navigation: { 
+        nextEl: '.new-articles__swiper-button-next',
+        prevEl: '.new-articles__swiper-button-prev',
+      },
+    });
+  });
   
