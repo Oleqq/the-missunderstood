@@ -39,5 +39,8 @@ html {
     @media (min-width: 1921px) {
         max-width: 1860px;
     }
+    @media (max-width:1440px) {
+        padding: 0 30px;
+    }
 }
 

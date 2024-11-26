@@ -366,6 +366,11 @@ html {
     max-width: 1860px;
   }
 }
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 30px;
+  }
+}
 
 @keyframes slideme {
   0% {
@@ -465,6 +470,11 @@ ul {
   display: flex;
   gap: 90px;
   list-style: none;
+}
+@media (max-width: 1440px) {
+  .header__nav {
+    display: none;
+  }
 }
 .header__nav a {
   font-family: var(--font-family);
@@ -1165,5 +1175,210 @@ ul {
 
 .favorite-picks .section-title {
   margin-bottom: 82px;
+}
+
+.gallery {
+  margin-bottom: 77px;
+}
+.gallery-main {
+  overflow: visible;
+}
+
+.faces-of-humanity {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .faces-of-humanity {
+    flex-direction: column;
+  }
+}
+.faces-of-humanity__sidebar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 20px;
+  max-width: 385px;
+  height: fit-content;
+}
+.faces-of-humanity__tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 72px;
+}
+.faces-of-humanity__tab {
+  border-bottom: 1px solid #cecece;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 129%;
+  color: #b96a4a;
+  padding: 30px 4px 22px 4px;
+  text-align: left;
+}
+.faces-of-humanity__tab--active {
+  background: transparent;
+  color: #0b0b0b;
+}
+.faces-of-humanity__grid {
+  display: none;
+}
+.faces-of-humanity__grid--active {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas: "photo-1 photo-1 photo-1 photo-1 photo-1 photo-2 photo-2 photo-2 photo-2 photo-2" "photo-1 photo-1 photo-1 photo-1 photo-1 photo-2 photo-2 photo-2 photo-2 photo-2" "photo-1 photo-1 photo-1 photo-1 photo-1 photo-3 photo-3 photo-3 photo-4 photo-4" "photo-5 photo-5 photo-5 photo-5 photo-5 photo-3 photo-3 photo-3 photo-4 photo-4" "photo-5 photo-5 photo-5 photo-5 photo-5 photo-3 photo-3 photo-3 photo-4 photo-4" "photo-6 photo-6 photo-7 photo-7 photo-7 photo-7 photo-8 photo-8 photo-8 photo-8" "photo-6 photo-6 photo-7 photo-7 photo-7 photo-7 photo-8 photo-8 photo-8 photo-8" "photo-6 photo-6 photo-7 photo-7 photo-7 photo-7 photo-9 photo-9 photo-9 photo-9" "photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-9 photo-9 photo-9 photo-9" "photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-9 photo-9 photo-9 photo-9";
+}
+@media (max-width: 767px) {
+  .faces-of-humanity__grid--active {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 12px 12px;
+    grid-template-areas: "photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1" "photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1 photo-1" "photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5" "photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5 photo-5" "photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2" "photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2 photo-2" "photo-3 photo-3 photo-3 photo-3 photo-3 photo-3 photo-3 photo-4 photo-4 photo-4 photo-4 photo-4" "photo-3 photo-3 photo-3 photo-3 photo-3 photo-3 photo-3 photo-4 photo-4 photo-4 photo-4 photo-4" "photo-6 photo-6 photo-6 photo-6 photo-6 photo-7 photo-7 photo-7 photo-7 photo-7 photo-7 photo-7" "photo-6 photo-6 photo-6 photo-6 photo-6 photo-7 photo-7 photo-7 photo-7 photo-7 photo-7 photo-7" "photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10" "photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10 photo-10" "photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8" "photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8 photo-8" "photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9" "photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9 photo-9";
+  }
+}
+.faces-of-humanity__grid .photo-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-area: photo-1;
+}
+.faces-of-humanity__grid .photo-2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 9;
+  grid-area: photo-2;
+}
+.faces-of-humanity__grid .photo-3 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 5;
+  grid-area: photo-3;
+}
+.faces-of-humanity__grid .photo-4 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 17;
+  -ms-grid-column-span: 3;
+  grid-area: photo-4;
+}
+.faces-of-humanity__grid .photo-5 {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-area: photo-5;
+}
+.faces-of-humanity__grid .photo-6 {
+  -ms-grid-row: 11;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: photo-6;
+}
+.faces-of-humanity__grid .photo-7 {
+  -ms-grid-row: 11;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 7;
+  grid-area: photo-7;
+}
+.faces-of-humanity__grid .photo-8 {
+  -ms-grid-row: 11;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 13;
+  -ms-grid-column-span: 7;
+  grid-area: photo-8;
+}
+.faces-of-humanity__grid .photo-9 {
+  -ms-grid-row: 15;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 13;
+  -ms-grid-column-span: 7;
+  grid-area: photo-9;
+}
+.faces-of-humanity__grid .photo-10 {
+  -ms-grid-row: 17;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 11;
+  grid-area: photo-10;
+}
+@media (max-width: 767px) {
+  .faces-of-humanity__grid .photo-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 23;
+  }
+  .faces-of-humanity__grid .photo-2 {
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 23;
+  }
+  .faces-of-humanity__grid .photo-3 {
+    -ms-grid-row: 13;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 13;
+  }
+  .faces-of-humanity__grid .photo-4 {
+    -ms-grid-row: 13;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 15;
+    -ms-grid-column-span: 9;
+  }
+  .faces-of-humanity__grid .photo-5 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 23;
+  }
+  .faces-of-humanity__grid .photo-6 {
+    -ms-grid-row: 17;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+  .faces-of-humanity__grid .photo-7 {
+    -ms-grid-row: 17;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 11;
+    -ms-grid-column-span: 13;
+  }
+  .faces-of-humanity__grid .photo-8 {
+    -ms-grid-row: 25;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 23;
+  }
+  .faces-of-humanity__grid .photo-9 {
+    -ms-grid-row: 29;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 23;
+  }
+  .faces-of-humanity__grid .photo-10 {
+    -ms-grid-row: 21;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 23;
+  }
+}
+.faces-of-humanity__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */

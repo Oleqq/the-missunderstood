@@ -27,3 +27,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+
+// swiper js end
+
+
+// gallery js
+document.querySelectorAll('.faces-of-humanity__tab').forEach((tab) => {
+  tab.addEventListener('click', () => {
+    // Удаляем активный класс у всех табов
+    document.querySelectorAll('.faces-of-humanity__tab').forEach((t) =>
+      t.classList.remove('faces-of-humanity__tab--active')
+    );
+    // Устанавливаем активный класс на кликнутый таб
+    tab.classList.add('faces-of-humanity__tab--active');
+
+    // Показываем соответствующую галерею
+    const photographer = tab.getAttribute('data-photographer');
+    document.querySelectorAll('.faces-of-humanity__grid').forEach((grid) => {
+      grid.classList.remove('faces-of-humanity__grid--active');
+      if (grid.getAttribute('data-photographer') === photographer) {
+        grid.classList.add('faces-of-humanity__grid--active');
+      }
+    });
+  });
+});
