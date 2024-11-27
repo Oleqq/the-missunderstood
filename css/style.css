@@ -650,11 +650,22 @@ ul {
 .product-list {
   margin-bottom: 160px;
 }
+@media (max-width: 767px) {
+  .product-list {
+    margin-bottom: 60px;
+  }
+}
 .product-list__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px;
   row-gap: 70px;
+}
+@media (max-width: 991px) {
+  .product-list__wrapper {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 45px;
+  }
 }
 .product-list__card {
   display: flex;

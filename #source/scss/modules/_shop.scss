@@ -3,11 +3,21 @@
     
     margin-bottom: 160px;
 
+    @media (max-width:767px) {
+        
+        margin-bottom: 60px;
+    }
+
     &__wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 20px;
         row-gap: 70px;
+
+        @media (max-width:991px) {
+            grid-template-columns: 1fr 1fr;
+            row-gap: 45px;
+        }
     }
 
     &__card {
