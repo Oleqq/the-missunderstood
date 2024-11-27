@@ -1,17 +1,28 @@
 
 // swiper js
-document.addEventListener('DOMContentLoaded', function() {
-    const swiper = new Swiper('.new-articles__swiper', {
-      
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.new-articles__swiper', {
       slidesPerView: 4,  
-      slidesToScroll: 1, 
+     
       spaceBetween: 13,  
       navigation: { 
-        nextEl: '.new-articles__swiper-button-next',
-        prevEl: '.new-articles__swiper-button-prev',
+          nextEl: '.new-articles__swiper-button-next',
+          prevEl: '.new-articles__swiper-button-prev',
       },
-    });
+      breakpoints: {
+          2560: { slidesPerView: 4 },
+          1920: { slidesPerView: 4 },
+          1440: { slidesPerView: 4 },
+          1024: { slidesPerView: 3 },
+          991: { slidesPerView: 3 },
+          767: { slidesPerView: 2 },
+          567: { slidesPerView: 1.1},
+          467: { slidesPerView: 1.1 },
+          0: { slidesPerView: 1.1 },
+      }
   });
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper('.travel-guides__slider', {

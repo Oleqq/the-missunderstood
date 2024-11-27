@@ -316,7 +316,17 @@ ul {
 
 
 
-
+// index main
+.index-main {
+    section.info-section {
+        @media (max-width:991px) {
+            margin-bottom: 120px;
+        }
+        @media (max-width:767px) {
+            margin-bottom: 60px;
+        }
+    }
+}
 
 
 
@@ -326,17 +336,54 @@ ul {
 // new articles
 .new-articles {
 
+    margin-top: 140px;
     margin-bottom: 140px;
+
+    .section-title {
+        @media (max-width:991px) {
+            font-size: 56px;
+        }
+        @media (max-width:767px) {
+            font-size: 46px;
+        }
+    }
+    .section-subtitle {
+        @media (max-width:991px) {
+            font-size: 20px;
+        }
+        @media (max-width:767px) {
+            font-size: 18px;
+        }
+    }
+
+    .container {
+
+        // @media (max-width:991px) {
+        //     padding: 0;
+        // }
+    }
 
     // Wrapper for the entire section
     &__wrapper {
       display: flex;
       justify-content: space-between;
+
+      @media (max-width:991px) {
+        flex-direction: column;
+        gap: 65px;
+      }
     }
   
     // Title of the section
     &__title {
         max-width: 400px; // Limit title width
+
+        // @media (max-width:991px) {
+        //     padding: 0 30px;
+        // }
+        // @media (max-width:467px) {
+        //     padding: 0 24px;
+        // }
 
         .ui__button-primary {
             margin-top: 47px;
@@ -363,6 +410,11 @@ ul {
             -webkit-line-clamp: 3;
             line-clamp: 3;
             -webkit-box-orient: vertical;
+
+            @media (max-width:767px) {
+                font-size: 24px;
+                margin: 20px 0 10px;
+            }
         }
         p {
             font-family: var(--font-family);
@@ -370,6 +422,10 @@ ul {
             font-size: 16px;
             line-height: 144%;
             color: #0b0b0b;    
+
+            @media (max-width:767px) {
+                margin: 10px 0;
+            }
         }
 
         
@@ -394,6 +450,10 @@ ul {
         height: 100%; // Height of each slide is 100% of the swiper container
         flex-shrink: 0;  // Prevent slides from shrinking when resizing the container
         max-width: 290px;
+
+        @media (max-width:991px) {
+            max-width: 100%;
+        }
       }
   
       // Custom navigation arrows (Next and Previous)
@@ -427,10 +487,21 @@ ul {
 
     margin-bottom: 93px;
 
+    @media (max-width:767px) {
+        margin-bottom: 60px;
+    }
+
     &__wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 20px;
+
+        @media (max-width:1440px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media (max-width:567px) {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
     &__card {
@@ -444,6 +515,10 @@ ul {
             font-size: 21px;
             line-height: 129%;
             color: #b96a4a;
+
+            @media (max-width:991px) {
+                margin: 20px 0 0 0;
+            }
         }
         p {
             font-family: var(--second-family);
@@ -451,6 +526,10 @@ ul {
             font-size: 21px;
             line-height: 172%;
             color: #0b0b0b;
+
+            @media (max-width:991px) {
+                margin: 0px 0 30px;
+            }
         }
     }
 }
@@ -462,6 +541,10 @@ ul {
 
     .container {
         position: relative;
+
+        @media (max-width:1440px) {
+            padding: 0;
+        }
     }
     
     &__title {
@@ -477,6 +560,10 @@ ul {
         margin: 0 auto;
         left: 0;
         right: 0;
+
+        @media (max-width:1440px) {
+            top: 56px;
+        }
     }
 
     &__wrapper {
@@ -487,18 +574,52 @@ ul {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         gap: 20px;
 
+        @media (max-width:1440px) {
+            grid-template-columns: 1fr 1fr 1fr;
+
+            padding: 142px 82px 72px;
+        }
+        @media (max-width:991px) {
+            grid-template-columns: 1fr 1fr;
+            padding: 142px 30px 70px;
+        }
+        @media (max-width:467px) {
+            padding: 142px 24px 47px;
+        }
         
     }
 }
 
 // our mission
 .our-mission {
-    
+
+    .section-title {
+        @media (max-width:991px) {
+            font-size: 56px;
+        }
+        @media (max-width:767px) {
+            font-size: 46px;
+        }
+    }
+    .section-subtitle {
+        @media (max-width:991px) {
+            font-size: 20px;
+        }
+        @media (max-width:767px) {
+            font-size: 18px;
+        }
+    }
+
     &__title {
         display: flex;
         justify-content: space-between;
 
         margin-bottom: 70px;
+
+        @media (max-width:991px) {
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
     
         h4 {
             font-family: var(--second-family);
@@ -514,6 +635,11 @@ ul {
     &__wrapper {
         display: flex;
         gap: 20px;
+
+        @media (max-width:991px) {
+            flex-direction: column;
+            gap: 40px;
+        }
     }
     &__card {
         img {
@@ -527,6 +653,11 @@ ul {
             color: #0b0b0b;
 
             margin: 30px 0 12px;
+
+            @media (max-width:767px) {
+                font-size: 24px;
+                margin: 20px 0 10px;
+            }
         }
         p {
             font-family: var(--font-family);
@@ -534,9 +665,16 @@ ul {
             font-size: 16px;
             line-height: 144%;
             color: #0b0b0b;
+            @media (max-width:767px) {
+                margin: 10px 0;
+            }
         }
         .ui__button-secondary {
             margin: 50px 0 0 ;
+
+            @media (max-width:991px) {
+                margin-top: 30px;
+            }
         }
     }
 
@@ -547,9 +685,38 @@ ul {
 .text-section {
     margin-bottom: 160px;
 
+    @media (max-width:991px) {
+        margin-bottom: 120px;
+    }
+    @media (max-width:767px) {
+        font-size: 80px;
+    }
+    
+
+
+    .section-title {
+        @media (max-width:991px) {
+            font-size: 56px;
+        }
+        @media (max-width:767px) {
+            font-size: 46px;
+        }
+    }
+    .section-subtitle {
+        @media (max-width:991px) {
+            font-size: 20px;
+        }
+        @media (max-width:767px) {
+            font-size: 18px;
+        }
+    }
 
     &__wrapper {
         display: flex;
+
+        @media (max-width:991px) {
+            flex-direction: column;
+        }
     }
 
     
@@ -749,6 +916,14 @@ ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 20px;
+
+        @media (max-width:991px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width:467px) {
+            column-gap: 20px;
+            row-gap: 0;
+        }
     }
     &__block {
         h4 {
