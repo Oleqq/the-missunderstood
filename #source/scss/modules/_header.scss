@@ -4,7 +4,7 @@
     
 
     &-secondary {
-        padding: 32px 84px;
+        padding: 32px 0;
 
         margin-bottom: 32px;
     }
@@ -13,14 +13,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: 1099px) {
+            justify-content: center;
+        }
     }
 
     &__nav {
         display: flex;
         gap: 90px;
         list-style: none;
-
+        @media (max-width:1660px) {
+            gap: 60px;
+        }
         @media (max-width:1440px) {
+            gap: 30px;
+        }
+
+        @media (max-width:1099px) {
             display: none;
         }
 
