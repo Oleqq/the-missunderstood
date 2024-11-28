@@ -13,6 +13,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
 
         @media (max-width: 1099px) {
             justify-content: center;
@@ -44,3 +45,102 @@
         }
     }
 }
+
+// header burger
+/* Base styles for burger icon */
+.burger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+
+    @media (max-width:1099px) {
+        display: flex;
+    }
+}
+
+.burger-icon {
+    position: absolute;
+    left: 0;
+
+    span {
+        display: block;
+        width: 22px;
+        height: 4px;
+        background-color: #333;
+        transition: .8s ease;
+    }
+}
+
+/* Animation for burger icon */
+.burger-icon.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: #fff;
+}
+
+.burger-icon.active span:nth-child(2) {
+    opacity: 0;
+    background-color: #fff;
+}
+
+.burger-icon.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #fff;
+}
+
+/* Base styles for burger menu */
+.burger-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 33vh;
+    background-color: rgba(0, 0, 0);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+    z-index: 1000;
+    opacity: 0;
+}
+
+.burger-menu.open {
+    top: 0;
+    opacity: 1;
+}
+
+.burger-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    a {
+        text-decoration: none;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+}
+
+
+
+
+
+.burger-menu a:hover {
+    color: #ff6347; /* Example highlight color */
+}
+
+
+

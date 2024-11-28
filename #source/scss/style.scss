@@ -104,7 +104,9 @@ ul {
             }
             @media (max-width:767px) {
                 margin-top: 0px;
+                padding: 16px 22px;
             }
+            
         }
         button {
             font-family: var(--font-family);
@@ -392,10 +394,27 @@ ul {
 
     &__card {
         text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .ui__button-secondary {
+            margin-top: auto !important;
+        }
 
         img {
             width: 100%;
             object-fit: cover;
+
+            width: 290px;
+            height: 390px;
+
+            @media (max-width:991px) {
+                width: 100%;
+            }
+            @media (max-width:767px) {
+                height: 250px;
+            }
         }
         h4 {
             font-family: var(--second-family);
@@ -594,7 +613,8 @@ ul {
 .our-mission {
 
     .section-title {
-        @media (max-width:991px) {
+
+        @media (max-width:1440px) {
             font-size: 56px;
         }
         @media (max-width:767px) {
@@ -615,6 +635,9 @@ ul {
         justify-content: space-between;
 
         margin-bottom: 70px;
+        @media (min-width:992px) {
+            gap: 60px;
+        }
 
         @media (max-width:991px) {
             flex-direction: column;
@@ -642,6 +665,14 @@ ul {
         }
     }
     &__card {
+        text-decoration: none;
+
+        width: 50%;
+
+        @media (max-width:991px) {
+            width: 100%;
+        }
+
         img {
             width: 100%;
             object-fit: cover;
@@ -695,7 +726,8 @@ ul {
 
 
     .section-title {
-        @media (max-width:991px) {
+
+        @media (max-width:1440px) {
             font-size: 56px;
         }
         @media (max-width:767px) {
@@ -713,7 +745,9 @@ ul {
 
     &__wrapper {
         display: flex;
-
+        @media (min-width:992px) {
+            gap: 60px;
+        }
         @media (max-width:991px) {
             flex-direction: column;
         }
@@ -756,13 +790,29 @@ ul {
 // main gallery
 .main-gallery {
     margin-bottom: 50px;
+
+    @media (max-width:767px) {
+        max-height: 500px;
+    }
     &__wrapper {
         display: flex;
+
+        @media (max-width:767px) {
+            height: 420px;
+        }
     }
     &__img {
+
+        width: fit-content !important;
         img {
             width: 100%;
             object-fit: cover;
+
+            @media (max-width:767px) {
+                width: 100%;
+                object-fit: cover;
+                height: 420px;
+            }
         }
     }
 }
@@ -772,7 +822,7 @@ ul {
     background: #f2f0ec;
     margin-bottom: 142px;
 
-    @media (max-width:767px) {
+    @media (max-width:991px) {
         margin-bottom: 156px;
     }
 
@@ -783,7 +833,7 @@ ul {
         @media (max-width:1440px) {
             padding-left: 0;
         }
-        @media (max-width:768px) {
+        @media (max-width:991px) {
             padding: 0 0;
         }
         
@@ -814,7 +864,7 @@ ul {
         @media (max-width:1440px) {
             gap: 40px;
         }
-        @media (max-width:768px) {
+        @media (max-width:991px) {
             flex-direction: column;
         }
         @media (max-width:567px) {
@@ -826,7 +876,7 @@ ul {
         display: flex;
         width: 815px;
         height: 856px;
-        @media (max-width:768px) {
+        @media (max-width:991px) {
             width: 100%;
             height: 100%;
             aspect-ratio: 1 / 1;
@@ -842,7 +892,7 @@ ul {
         flex-direction: column;
         justify-content: center;
 
-        @media (max-width:768px) {
+        @media (max-width:991px) {
             padding: 0 30px;
         }
         @media (max-width:467px) {
@@ -864,6 +914,8 @@ ul {
         display: flex;
         gap: 44px;
         margin-top: 44px;
+
+        height: 350px;
 
         @media (max-width:767px) {
             padding-bottom: 40px;
@@ -901,8 +953,8 @@ ul {
             
             overflow: hidden;
             display: -webkit-box;
-            -webkit-line-clamp: 3;
-            line-clamp: 3;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
             -webkit-box-orient: vertical;
         }
     }
@@ -971,6 +1023,9 @@ ul {
 
         position: relative;
 
+        @media (min-width:1920px) {
+            justify-content: center;
+        }
         @media (max-width:1440px) {
             gap: 30px;
         }
@@ -1090,6 +1145,12 @@ ul {
             display: flex;
             width: 100%;
             object-fit: cover;
+            height: 300px;
+
+            @media (max-width:767px) {
+                height: fit-content;
+                aspect-ratio: 1 / 1;
+            }
         }
 
         h4 {
@@ -1292,8 +1353,8 @@ ul {
             
         }
 
-        p:nth-child(1) {
-            &::first-letter {
+        p > strong {
+            
 
                 float: left; 
                 line-height: 1;
@@ -1305,7 +1366,7 @@ ul {
                 font-size: 68px;
                 text-align: center;
                 color: #0b0b0b;
-            }
+            
         }
 
         
@@ -1566,13 +1627,14 @@ ul {
     &__tabs {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        
 
         margin-top: 72px;
   
         @media (max-width:991px) {
-            margin-top: 60px;
+            display: none;
         }
+        
     }
   
     &__tab {
@@ -1601,8 +1663,15 @@ ul {
 
     &__grid {
         display: none;
+        transform: translateY(-200px);
+        opacity: 0;
+        transition: 1s ease;
 
         &--active {
+            transform: translateY(0);
+            opacity: 1;
+            transition: 1s ease;
+
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             
@@ -1677,8 +1746,127 @@ ul {
 }
 
 
+ // dropdown 
+.faces-of-humanity {
+    // dropdown 
+    &__dropdown {
+        position: relative;
+        display: none;
+
+        @media (max-width:991px) {
+            display: inline-block;
+        }
+
+    
+        &.open {
+            .faces-of-humanity__dropdown-button svg {
+                transform: rotate(180deg);
+                transition: .2s ease;
+            }
+            .faces-of-humanity__dropdown-content {
+                display: flex;
+                flex-direction: column; 
+            }
+        }
+    
+       
+        .faces-of-humanity__dropdown-button svg {
+            transform: rotate(0deg);
+            transition: .2s ease;
+        }
+    
+    
+        // button 
+        &-button {
+
+            position: relative;
+            z-index: 10;
+
+            border-bottom: 1px solid #cecece;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            background-color: transparent;
+            cursor: pointer;
+        
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 129%;
+            color: #0B0B0B;
+        
+            padding: 30px 4px 22px 4px;
+            text-align: left;
+
+            @media (max-width:567px) {
+                width: calc(100vw - 60px);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            @media (max-width:467px) {
+                width: calc(100vw - 48px);
+            }
+        
+            &--active {
+              background: transparent;
+              color: #0b0b0b;
+            }
+            
+        }
+    
+        // content
+        &-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border: 1px solid #ccc;
+        }      
+    }
+
+    // dropdown tab
+    &__tab {
+        color: #0B0B0B;
+        padding: 30px !important;
+
+        @media (max-width:467px) {
+            padding: 24px !important;
+        }
+
+        &--active {
+        
+            color: #b96a4a;
+            white-space: nowrap;
+        }
+    }
+}
 
 
-  
+
+
+
+
+
+
+
+.faces-of-humanity__tab {
+    background-color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+
+    border-bottom: 1px solid #cecece;
+}
+
+.faces-of-humanity__tab:hover {
+    background-color: #f1f1f1;
+}
+
+
 
   

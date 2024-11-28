@@ -84,14 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
 // gallery js
 document.querySelectorAll('.faces-of-humanity__tab').forEach((tab) => {
   tab.addEventListener('click', () => {
-    // Удаляем активный класс у всех табов
+    
     document.querySelectorAll('.faces-of-humanity__tab').forEach((t) =>
       t.classList.remove('faces-of-humanity__tab--active')
     );
-    // Устанавливаем активный класс на кликнутый таб
+    
     tab.classList.add('faces-of-humanity__tab--active');
 
-    // Показываем соответствующую галерею
+   
     const photographer = tab.getAttribute('data-photographer');
     document.querySelectorAll('.faces-of-humanity__grid').forEach((grid) => {
       grid.classList.remove('faces-of-humanity__grid--active');
@@ -101,3 +101,37 @@ document.querySelectorAll('.faces-of-humanity__tab').forEach((tab) => {
     });
   });
 });
+
+
+// gallery dropdown
+document.querySelector('.faces-of-humanity__dropdown-button').addEventListener('click', function() {
+  const dropdown = document.querySelector('.faces-of-humanity__dropdown');
+  dropdown.classList.toggle('open');
+});
+
+
+document.querySelectorAll('.faces-of-humanity__tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+     
+      document.querySelectorAll('.faces-of-humanity__tab').forEach(tab => tab.classList.remove('faces-of-humanity__tab--active'));
+      
+      this.classList.add('faces-of-humanity__tab--active');
+     
+      document.querySelector('.faces-of-humanity__dropdown').classList.remove('open');
+      
+      console.log('Selected photographer:', this.dataset.photographer);
+  });
+});
+
+
+
+// header burger
+function toggleMenu() {
+  // Select the burger icon and menu
+  const burgerIcon = document.querySelector('.burger-icon');
+  const burgerMenu = document.querySelector('.burger-menu');
+
+  // Toggle the active/open classes
+  burgerIcon.classList.toggle('active');
+  burgerMenu.classList.toggle('open');
+}
