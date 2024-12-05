@@ -1,3 +1,95 @@
+let scrollPercent = 0;  // Прогресс прокрутки от 0 до 1
+let targetScrollPercent = 0;  // Целевой прогресс прокрутки
+
+// Определяем изображения в зависимости от ширины экрана
+const heroImgs = document.querySelectorAll('.hero__img img');
+const heroH1 = document.querySelector('.hero__img h1');
+const heroFader = document.querySelector('.hero__fader');
+
+// Функция для обновления анимации
+function updateAnimation() {
+    // Выбираем активное изображение в зависимости от ширины экрана
+    const activeImg = window.innerWidth <= 767 ? document.querySelector('.mobile-img') : document.querySelector('.desktop-img');
+
+    // Масштабирование изображения (максимум 1.26)
+    const scaleY = 1 + scrollPercent * 0.26;  // Масштабирование изображения
+    activeImg.style.transform = `scale(${scaleY})`;
+    activeImg.style.transformOrigin = 'center center';
+
+    // Плавное появление текста
+    heroH1.style.opacity = Math.min(scrollPercent * 3, 1);  // Текст появляется быстрее
+
+    // Плавное появление фейдера
+    heroFader.style.opacity = Math.min(scrollPercent * 2, 1);  // Фейдер появляется быстрее
+}
+
+// Функция для обновления прокрутки
+function handleScroll(event) {
+    // Обрабатываем изменение прокрутки (с использованием deltaY)
+    const scrollDelta = event.deltaY || (event.touches ? event.touches[0].clientY : 0);
+    if (scrollDelta) {
+        // Модификация прокрутки для плавности (замедляем прокрутку)
+        targetScrollPercent += scrollDelta * 0.002;  // Можно подкорректировать скорость прокрутки
+        targetScrollPercent = Math.min(Math.max(targetScrollPercent, 0), 1);  // Ограничиваем значения от 0 до 1
+    }
+}
+
+// Функция для анимации прокрутки и обновления прогресса
+function update() {
+    // Интерполяция для плавного перехода между текущим и целевым значением
+    scrollPercent += (targetScrollPercent - scrollPercent) * 0.1;  // Коэффициент замедления
+
+    // Обновляем анимацию
+    updateAnimation();
+
+    // Продолжаем обновлять анимацию
+    requestAnimationFrame(update);
+}
+
+// Слушаем события колесика мыши и тачскролл
+document.addEventListener('wheel', handleScroll, { passive: false });
+document.addEventListener('touchmove', handleScroll, { passive: false });
+
+// Начинаем обновление анимации
+requestAnimationFrame(update);
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              console.log('Element is visible:', entry.target);
+              entry.target.classList.add('animated');
+              observer.unobserve(entry.target);
+          }
+      });
+  }, {
+      root: null, 
+      rootMargin: '0px', 
+      threshold: 0.01 
+  });
+
+  const sections = document.querySelectorAll('section');
+  console.log('Sections found:', sections);  // Логирование выбранных элементов
+
+  sections.forEach(section => {
+      observer.observe(section);
+  });
+});
+
+
+
+
+
 
 // swiper js
 document.addEventListener('DOMContentLoaded', function () {
@@ -135,3 +227,8 @@ function toggleMenu() {
   burgerIcon.classList.toggle('active');
   burgerMenu.classList.toggle('open');
 }
+
+
+
+
+

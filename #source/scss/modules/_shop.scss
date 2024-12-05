@@ -39,6 +39,22 @@
             font-weight: 400;
             font-size: 31px;
             color: #0b0b0b;
+
+            @media (max-width:1440px) {
+                font-size: 24px;
+            }
+            @media (max-width:767px) {
+                font-size: 20px;
+            }
+
+            transition: .4s ease;
+        
+
+            &:hover {
+                transition: .4s ease;
+                text-shadow: 0 0 .5px #000;
+                
+            }
         }
 
         p, span {
@@ -54,5 +70,15 @@
 
     &__link {
         margin-top: 30px !important;
+
+        transition: .4s ease;
+        
+
+        &:hover {
+            transition: .4s ease;
+            text-decoration: underline !important;
+            text-underline-offset: 2px;
+            
+        }
     }
 }

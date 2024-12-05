@@ -22,15 +22,7 @@ html {
 
 
 
-.page-content {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    min-height: unset;
-    @media (max-width: 991px) {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-}
+
 
 .container {
     @media (min-width: 1200px) and (max-width: 1920px) {
@@ -41,6 +33,7 @@ html {
     }
     @media (max-width:1440px) {
         padding: 0 30px;
+        max-width: 90%;
     }
     @media (max-width:467px) {
         padding: 0 24px;
